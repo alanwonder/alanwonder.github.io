@@ -1,2 +1,3 @@
 name: Alan Zhou
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
