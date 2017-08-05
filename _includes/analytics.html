@@ -7,6 +7,15 @@
   ga('create', 'UA-104102584-1', 'auto');
   ga('send', 'pageview');
   ga('set', 'userId', {{USER_ID}});
-  _gaq.push([‘_trackTiming’, pageload, pageload, 100, blog, 100]);
+  
+  var startTime = new Date().getTime();
+
+  setTimeout(myCallback, 200);
+
+  function myCallback(event) {
+
+  var endTime = new Date().getTime();
+  var timeSpent = endTime - startTime;
+  _gaq.push([‘_trackTiming’, pageload, pageload, timeSpent, blog]);
 
 </script>
